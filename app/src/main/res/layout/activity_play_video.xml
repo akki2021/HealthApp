@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.videos.PlayVideoActivity">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/ytPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/LectureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ytPlayer">
+
+        <TextView
+            android:id="@+id/lectureTitle"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@id/lectureShare"
+            android:gravity="start"
+            android:textSize="24sp"
+            tools:text="VIDEO TITLE" />
+
+        <ImageView
+            android:id="@+id/lectureShare"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:src="@drawable/ic_baseline_share_24" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
