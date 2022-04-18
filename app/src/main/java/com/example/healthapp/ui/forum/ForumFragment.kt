@@ -23,7 +23,7 @@ class ForumFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(ForumViewModel::class.java)
+            ViewModelProvider(this)[ForumViewModel::class.java]
 
         _binding = FragmentForumBinding.inflate(inflater, container, false)
         val root: View = binding.root

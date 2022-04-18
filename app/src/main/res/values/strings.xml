@@ -3,6 +3,19 @@
     <string name="title_information">Information</string>
     <string name="title_forum">Forum</string>
     <string name="title_profile">Profile</string>
+    <string name="blogs_text">BLOGS</string>
+    <string name="videos_text">VIDEOS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="videos_title">Videos</string>
+    <string name="blogs_title">Blogs</string>
+    <string name="title_activity_play_video">PlayVideoActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="developer_key">AIzaSyCbRe7orPL83e46DsxrevnMKcYJcUmQoYo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register">Register</string>
