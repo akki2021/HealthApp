@@ -32,27 +32,27 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val user=FirebaseAuth.getInstance().currentUser
-        database=FirebaseDatabase.getInstance().getReference("User")
-        if(user!=null){
-            database.child(user.uid).addValueEventListener(object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-
-                    val map = snapshot.value as Map<String,String>?
-                    val f_name=map!!["First_name"]
-                    val l_name=map!!["Last_name"]
-                    val emailm=map!!["Email"]
-                    val Mobile=map!!["Mobile"]
-                    val nam_e=f_name +" "+ l_name
-                    name.text = nam_e
-                    emaill.text=emailm
-                    contact.text = Mobile
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-            })
-        }
+//        database=FirebaseDatabase.getInstance().getReference("User")
+//        if(user!=null){
+//            database.child(user.uid).addValueEventListener(object : ValueEventListener{
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//
+//                    val map = snapshot.value as Map<String,String>?
+//                    val f_name=map!!["First_name"]
+//                    val l_name=map!!["Last_name"]
+//                    val emailm=map!!["Email"]
+//                    val Mobile=map!!["Mobile"]
+//                    val nam_e=f_name +" "+ l_name
+//                    name.text = nam_e
+//                    emaill.text=emailm
+//                    contact.text = Mobile
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {
+//
+//                }
+//            })
+//        }
 
 
         return root
