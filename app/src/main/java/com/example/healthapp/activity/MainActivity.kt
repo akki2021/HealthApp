@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav = binding.bottomNavigation
 
-        navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController = findNavController(R.id.hostFragment)
         setupBottomNavigation()
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

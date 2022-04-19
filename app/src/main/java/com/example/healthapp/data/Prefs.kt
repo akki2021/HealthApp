@@ -28,4 +28,8 @@ class Prefs(context: Context) {
         get() = preferences.getInt("status", -1)
         set(value) = preferences.edit().putInt("age", value).apply()
 
+    var forumAlert: Int
+        get()= preferences.getInt("forumAlert", -1)
+        set(value)= preferences.edit().putInt("forumAlert", value).apply()
+
 }

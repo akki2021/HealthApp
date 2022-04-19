@@ -22,4 +22,13 @@
     <style name="Theme.HealthApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.HealthApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="desc">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#898989</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
 </resources>

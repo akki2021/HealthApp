@@ -15,7 +15,14 @@
         android:id="@+id/navigation_forum"
         android:name="com.example.healthapp.ui.forum.ForumFragment"
         android:label="@string/title_forum"
-        tools:layout="@layout/fragment_forum" />
+        tools:layout="@layout/fragment_forum" >
+        <action
+            android:id="@+id/action_navigation_forum_to_navigation_information"
+            app:destination="@id/navigation_information" />
+        <action
+            android:id="@+id/action_navigation_forum_to_replyFragment"
+            app:destination="@id/replyFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -34,4 +41,9 @@
         android:name="com.example.healthapp.ui.blogs.BlogsFragment"
         android:label="@string/blogs_title"
         tools:layout="@layout/fragment_blogs" />
+    <fragment
+        android:id="@+id/replyFragment"
+        android:name="com.example.healthapp.ui.forum.ReplyFragment"
+        android:label="Replies"
+        tools:layout="@layout/fragment_reply" />
 </navigation>

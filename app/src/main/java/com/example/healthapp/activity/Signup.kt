@@ -104,9 +104,10 @@ class Signup: Fragment() {
     private fun  validate_data(){
         Email=email.editText?.text.toString()
         Username=username.editText?.text.toString()
-        Age= Integer.parseInt(ageLayout.editText?.text.toString())
+        Age= Integer.parseInt(age.text.toString())
         Name=name.editText?.text.toString()
         Password=password.editText?.text.toString()
+        ConfirmPassword = confirmPassword.text.toString()
         if(!Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
             email.error="Invalid Email"
             
@@ -153,8 +154,8 @@ class Signup: Fragment() {
             .addOnSuccessListener {
 
                 val firebaseUser= FirebaseAuth.getInstance().currentUser
-                val user = User(Username, Name, Email, Age)
                 if (firebaseUser != null) {
+                    val user = User(firebaseUser.uid, Username, Name, Email, Age)
                     Firebase.firestore.collection("users").document(firebaseUser.uid)
                         .set(user)
                         .addOnCompleteListener { it ->
