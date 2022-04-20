@@ -79,7 +79,7 @@ class Login: Fragment() {
         Email= emailLogin.editText?.text.toString()
         Password=password_text_input.editText?.text.toString()
         if(!Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
-            username.error="Invalid Email format"
+            emailLogin.error="Invalid Email format"
         }
         if(Password.length<8){
             password_text_input.error="Password must atleast 8 character"
